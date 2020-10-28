@@ -4,7 +4,6 @@ const express = require('express');
 const expressApp = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const fs = require('fs');
 const port = 3005;
 const axios = require('axios');
 const mongo = require('mongodb');
@@ -90,7 +89,6 @@ expressApp.get('/api/fail', (req, res) => {
 })
 
 expressApp.post('/api/fail', (req, res) => {
-  //console.log(req.body)
   const fail = req.body;
   console.log(fail)
   res.json({
